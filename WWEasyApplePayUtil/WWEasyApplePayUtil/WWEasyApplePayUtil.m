@@ -7,18 +7,81 @@
 //
 
 #import "WWEasyApplePayUtil.h"
+#import <objc/runtime.h>
+
+const char* PKPaymentAuthorizationViewControllerComplationBlock = "PKPaymentAuthorizationViewControllerComplationBlock";
+const char* PKPaymentAuthorizationViewControllerFailureBlock = "PKPaymentAuthorizationViewControllerFailureBlock";
+const char* PKPaymentAuthorizationViewControllerFinishBlock = "PKPaymentAuthorizationViewControllerFinishBlock";
+
+@interface PKPaymentAuthorizationViewController(block)
+
+-(id)getPKPaymentAuthorizationViewControllerFailureBlock;
 
 
+-(void)setPKPaymentAuthorizationViewControllerFailureBlock:(id)block;
+
+
+-(id)getPKPaymentAuthorizationViewControllerComplationBlock;
+
+
+-(void)setPKPaymentAuthorizationViewControllerComplationBlock:(id)block;
+
+-(id)getPKPaymentAuthorizationViewControllerFinishBlock;
+
+
+-(void)setPKPaymentAuthorizationViewControllerFinishBlock:(id)block;
+
+
+@end
+
+@implementation PKPaymentAuthorizationViewController(block)
+
+-(id)getPKPaymentAuthorizationViewControllerComplationBlock
+{
+    id block  = objc_getAssociatedObject(self, PKPaymentAuthorizationViewControllerComplationBlock);
+    return block;
+}
+
+-(void)setPKPaymentAuthorizationViewControllerComplationBlock:(id)block
+{
+    objc_setAssociatedObject(self, PKPaymentAuthorizationViewControllerComplationBlock, block, OBJC_ASSOCIATION_COPY);
+}
+
+
+-(id)getPKPaymentAuthorizationViewControllerFailureBlock
+{
+    id block  = objc_getAssociatedObject(self, PKPaymentAuthorizationViewControllerFailureBlock);
+    return block;
+}
+
+-(void)setPKPaymentAuthorizationViewControllerFailureBlock:(id)block
+{
+    objc_setAssociatedObject(self, PKPaymentAuthorizationViewControllerFailureBlock, block, OBJC_ASSOCIATION_COPY);
+}
+
+-(id)getPKPaymentAuthorizationViewControllerFinishBlock
+{
+    id block  = objc_getAssociatedObject(self, PKPaymentAuthorizationViewControllerFailureBlock);
+    return block;
+}
+
+-(void)setPKPaymentAuthorizationViewControllerFinishBlock:(id)block
+{
+    objc_setAssociatedObject(self, PKPaymentAuthorizationViewControllerFinishBlock, block, OBJC_ASSOCIATION_COPY);
+}
+
+
+
+@end
 
 @interface WWEasyApplePayUtil () <PKPaymentAuthorizationViewControllerDelegate>
 {
-    NSString* _countryCode;
-    NSString* _currencyCode;
+
 }
 
-@property(nonatomic,copy)WWEasyApplePayAuthorizationBlock authorizationBlock;
-@property(nonatomic,copy)WWEasyApplePayCompletionBlock completionBlock;
-@property(nonatomic,copy)WWEasyApplePayFailureBlock failureBlock;
+//@property(nonatomic,copy)WWEasyApplePayAuthorizationBlock authorizationBlock;
+//@property(nonatomic,copy)WWEasyApplePayCompletionBlock completionBlock;
+//@property(nonatomic,copy)WWEasyApplePayFailureBlock failureBlock;
 
 @end
 
@@ -36,18 +99,63 @@
 
 
 
-- (instancetype)initWithCountryCode:(NSString*)countryCode currencyCode:(NSString*)currencyCode authrizationBlock:(WWEasyApplePayAuthorizationBlock)authrizationBlock failureBlock:(WWEasyApplePayFailureBlock)failureBlock
+- (instancetype)initWithCountryCode:(NSString*)countryCode
+                       currencyCode:(NSString*)currencyCode
+                 merchantIdentifier:(NSString*)merchantIdentifier
 {
     if (self = [super init]) {
         _countryCode = countryCode;
         _currencyCode = currencyCode;
-        _authorizationBlock = authrizationBlock;
-        //_completionBlock = completionBlock;
-        _failureBlock = failureBlock;
+        _merchantIdentifier = merchantIdentifier;
         
         
     }
     return self;
+}
+
+-(void)payWithAuthorizationBlock:(WWEasyApplePayAuthorizationBlock) authorizationBlock
+                    failureBlock:(WWEasyApplePayFailureBlock)failureBlock
+                     finishBlock:(WWEasyApplePayFinishBlock)finishBlock
+             paymentSummaryItems:(PKPaymentSummaryItem *)summaryItems,... NS_REQUIRES_NIL_TERMINATION
+{
+    //_authorizationBlock = authorizationBlock;
+    NSAssert(summaryItems != nil, @"the paymentSummaryItems must not be nil!");
+    NSMutableArray* payments = [NSMutableArray arrayWithCapacity:1];
+    PKPaymentSummaryItem  *item;
+    va_list argumentList;
+    if (summaryItems)
+    {
+        va_start(argumentList,summaryItems);
+        while ((item = va_arg(argumentList, id)))
+        {
+            [payments addObject:item];
+        }
+        va_end(argumentList);
+    }
+    
+    //判断是否支持
+    if([PKPaymentAuthorizationViewController canMakePayments]) {
+        PKPaymentRequest *request = [[PKPaymentRequest alloc] init];
+        request.countryCode = self.countryCode;
+        request.currencyCode = self.currencyCode;
+        request.supportedNetworks = @[PKPaymentNetworkAmex, PKPaymentNetworkMasterCard, PKPaymentNetworkVisa];
+        request.merchantCapabilities = PKMerchantCapabilityEMV;
+        
+        request.merchantIdentifier = self.merchantIdentifier;
+        request.paymentSummaryItems = payments;
+        
+        PKPaymentAuthorizationViewController *paymentPane = [[PKPaymentAuthorizationViewController alloc] initWithPaymentRequest:request];
+        paymentPane.delegate = self;
+        [paymentPane setPKPaymentAuthorizationViewControllerComplationBlock:authorizationBlock];
+        [paymentPane setPKPaymentAuthorizationViewControllerFailureBlock:failureBlock];
+        [paymentPane setPKPaymentAuthorizationViewControllerFinishBlock:finishBlock];
+        UIViewController* root = [UIApplication sharedApplication].keyWindow.rootViewController;
+        [root presentViewController:paymentPane animated:TRUE completion:nil];
+    }
+    else
+    {
+        NSLog(@"this device does not support apple apple pay");
+    }
 }
 
 
@@ -94,24 +202,13 @@
     
     NSLog(@"Payment was authorized: %@", payment);
     
+    WWEasyApplePayAuthorizationBlock authorizationBlock = [controller getPKPaymentAuthorizationViewControllerComplationBlock];
     
-    if (self.authorizationBlock) {
-        self.authorizationBlock(controller,payment,completion);
+    if (authorizationBlock) {
+        authorizationBlock(controller,payment,completion);
     
     }
     return;
-    BOOL asyncSuccessful = FALSE;
-    
-    // When the async call is done, send the callback.
-    // Available cases are:
-    //    PKPaymentAuthorizationStatusSuccess, // Merchant auth'd (or expects to auth) the transaction successfully.
-    //    PKPaymentAuthorizationStatusFailure, // Merchant failed to auth the transaction.
-    //
-    //    PKPaymentAuthorizationStatusInvalidBillingPostalAddress,  // Merchant refuses service to this billing address.
-    //    PKPaymentAuthorizationStatusInvalidShippingPostalAddress, // Merchant refuses service to this shipping address.
-    //    PKPaymentAuthorizationStatusInvalidShippingContact        // Supplied contact information is insufficient.
-    
-    completion(PKPaymentAuthorizationStatusSuccess);
 }
 
 
@@ -122,6 +219,10 @@
 // The delegate is responsible for dismissing the view controller in this method.
 - (void)paymentAuthorizationViewControllerDidFinish:(PKPaymentAuthorizationViewController *)controller
 {
+    WWEasyApplePayFinishBlock finishBlock = [controller getPKPaymentAuthorizationViewControllerFinishBlock];
+    if (finishBlock) {
+        finishBlock(controller);
+    }
      NSLog(@"Payment was authorized: %@", controller);
     [controller dismissViewControllerAnimated:YES completion:nil];
 }
