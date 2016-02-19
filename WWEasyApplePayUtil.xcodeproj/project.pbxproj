@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2453311F1C76E7B500773FF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2453311E1C76E7B500773FF8 /* main.m */; };
+		245331221C76E7B500773FF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 245331211C76E7B500773FF8 /* AppDelegate.m */; };
+		245331251C76E7B500773FF8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245331241C76E7B500773FF8 /* ViewController.m */; };
+		245331281C76E7B500773FF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245331261C76E7B500773FF8 /* Main.storyboard */; };
+		2453312A1C76E7B500773FF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 245331291C76E7B500773FF8 /* Assets.xcassets */; };
+		2453312D1C76E7B500773FF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2453312B1C76E7B500773FF8 /* LaunchScreen.storyboard */; };
+		245331381C76E7B500773FF8 /* WWEasyApplePayUtilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 245331371C76E7B500773FF8 /* WWEasyApplePayUtilTests.m */; };
+		245331431C76E7B500773FF8 /* WWEasyApplePayUtilUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 245331421C76E7B500773FF8 /* WWEasyApplePayUtilUITests.m */; };
+		245331541C76F2E300773FF8 /* WWEasyApplePayUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 245331531C76F2E300773FF8 /* WWEasyApplePayUtil.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		245331341C76E7B500773FF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 245331121C76E7B500773FF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 245331191C76E7B500773FF8;
+			remoteInfo = WWEasyApplePayUtil;
+		};
+		2453313F1C76E7B500773FF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 245331121C76E7B500773FF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 245331191C76E7B500773FF8;
+			remoteInfo = WWEasyApplePayUtil;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2453311A1C76E7B500773FF8 /* WWEasyApplePayUtil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWEasyApplePayUtil.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2453311E1C76E7B500773FF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		245331201C76E7B500773FF8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		245331211C76E7B500773FF8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		245331231C76E7B500773FF8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		245331241C76E7B500773FF8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		245331271C76E7B500773FF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		245331291C76E7B500773FF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2453312C1C76E7B500773FF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2453312E1C76E7B500773FF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		245331331C76E7B500773FF8 /* WWEasyApplePayUtilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WWEasyApplePayUtilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		245331371C76E7B500773FF8 /* WWEasyApplePayUtilTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWEasyApplePayUtilTests.m; sourceTree = "<group>"; };
+		245331391C76E7B500773FF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2453313E1C76E7B500773FF8 /* WWEasyApplePayUtilUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WWEasyApplePayUtilUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		245331421C76E7B500773FF8 /* WWEasyApplePayUtilUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWEasyApplePayUtilUITests.m; sourceTree = "<group>"; };
+		245331441C76E7B500773FF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		245331511C76EC1300773FF8 /* WWEasyApplePayUtil.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WWEasyApplePayUtil.entitlements; sourceTree = "<group>"; };
+		245331521C76F2E300773FF8 /* WWEasyApplePayUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWEasyApplePayUtil.h; sourceTree = "<group>"; };
+		245331531C76F2E300773FF8 /* WWEasyApplePayUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWEasyApplePayUtil.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		245331171C76E7B500773FF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		245331301C76E7B500773FF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2453313B1C76E7B500773FF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		245331111C76E7B500773FF8 = {
+			isa = PBXGroup;
+			children = (
+				2453311C1C76E7B500773FF8 /* WWEasyApplePayUtil */,
+				245331361C76E7B500773FF8 /* WWEasyApplePayUtilTests */,
+				245331411C76E7B500773FF8 /* WWEasyApplePayUtilUITests */,
+				2453311B1C76E7B500773FF8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2453311B1C76E7B500773FF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2453311A1C76E7B500773FF8 /* WWEasyApplePayUtil.app */,
+				245331331C76E7B500773FF8 /* WWEasyApplePayUtilTests.xctest */,
+				2453313E1C76E7B500773FF8 /* WWEasyApplePayUtilUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2453311C1C76E7B500773FF8 /* WWEasyApplePayUtil */ = {
+			isa = PBXGroup;
+			children = (
+				245331511C76EC1300773FF8 /* WWEasyApplePayUtil.entitlements */,
+				245331501C76E7D100773FF8 /* WWEasyApplePayUtil */,
+				245331201C76E7B500773FF8 /* AppDelegate.h */,
+				245331211C76E7B500773FF8 /* AppDelegate.m */,
+				245331231C76E7B500773FF8 /* ViewController.h */,
+				245331241C76E7B500773FF8 /* ViewController.m */,
+				245331261C76E7B500773FF8 /* Main.storyboard */,
+				245331291C76E7B500773FF8 /* Assets.xcassets */,
+				2453312B1C76E7B500773FF8 /* LaunchScreen.storyboard */,
+				2453312E1C76E7B500773FF8 /* Info.plist */,
+				2453311D1C76E7B500773FF8 /* Supporting Files */,
+			);
+			path = WWEasyApplePayUtil;
+			sourceTree = "<group>";
+		};
+		2453311D1C76E7B500773FF8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2453311E1C76E7B500773FF8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		245331361C76E7B500773FF8 /* WWEasyApplePayUtilTests */ = {
+			isa = PBXGroup;
+			children = (
+				245331371C76E7B500773FF8 /* WWEasyApplePayUtilTests.m */,
+				245331391C76E7B500773FF8 /* Info.plist */,
+			);
+			path = WWEasyApplePayUtilTests;
+			sourceTree = "<group>";
+		};
+		245331411C76E7B500773FF8 /* WWEasyApplePayUtilUITests */ = {
+			isa = PBXGroup;
+			children = (
+				245331421C76E7B500773FF8 /* WWEasyApplePayUtilUITests.m */,
+				245331441C76E7B500773FF8 /* Info.plist */,
+			);
+			path = WWEasyApplePayUtilUITests;
+			sourceTree = "<group>";
+		};
+		245331501C76E7D100773FF8 /* WWEasyApplePayUtil */ = {
+			isa = PBXGroup;
+			children = (
+				245331521C76F2E300773FF8 /* WWEasyApplePayUtil.h */,
+				245331531C76F2E300773FF8 /* WWEasyApplePayUtil.m */,
+			);
+			path = WWEasyApplePayUtil;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		245331191C76E7B500773FF8 /* WWEasyApplePayUtil */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 245331471C76E7B500773FF8 /* Build configuration list for PBXNativeTarget "WWEasyApplePayUtil" */;
+			buildPhases = (
+				245331161C76E7B500773FF8 /* Sources */,
+				245331171C76E7B500773FF8 /* Frameworks */,
+				245331181C76E7B500773FF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WWEasyApplePayUtil;
+			productName = WWEasyApplePayUtil;
+			productReference = 2453311A1C76E7B500773FF8 /* WWEasyApplePayUtil.app */;
+			productType = "com.apple.product-type.application";
+		};
+		245331321C76E7B500773FF8 /* WWEasyApplePayUtilTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2453314A1C76E7B500773FF8 /* Build configuration list for PBXNativeTarget "WWEasyApplePayUtilTests" */;
+			buildPhases = (
+				2453312F1C76E7B500773FF8 /* Sources */,
+				245331301C76E7B500773FF8 /* Frameworks */,
+				245331311C76E7B500773FF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				245331351C76E7B500773FF8 /* PBXTargetDependency */,
+			);
+			name = WWEasyApplePayUtilTests;
+			productName = WWEasyApplePayUtilTests;
+			productReference = 245331331C76E7B500773FF8 /* WWEasyApplePayUtilTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2453313D1C76E7B500773FF8 /* WWEasyApplePayUtilUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2453314D1C76E7B500773FF8 /* Build configuration list for PBXNativeTarget "WWEasyApplePayUtilUITests" */;
+			buildPhases = (
+				2453313A1C76E7B500773FF8 /* Sources */,
+				2453313B1C76E7B500773FF8 /* Frameworks */,
+				2453313C1C76E7B500773FF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				245331401C76E7B500773FF8 /* PBXTargetDependency */,
+			);
+			name = WWEasyApplePayUtilUITests;
+			productName = WWEasyApplePayUtilUITests;
+			productReference = 2453313E1C76E7B500773FF8 /* WWEasyApplePayUtilUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		245331121C76E7B500773FF8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "我就是大强";
+				TargetAttributes = {
+					245331191C76E7B500773FF8 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = VY63TUJ896;
+						SystemCapabilities = {
+							com.apple.OMC = {
+								enabled = 1;
+							};
+						};
+					};
+					245331321C76E7B500773FF8 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 245331191C76E7B500773FF8;
+					};
+					2453313D1C76E7B500773FF8 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 245331191C76E7B500773FF8;
+					};
+				};
+			};
+			buildConfigurationList = 245331151C76E7B500773FF8 /* Build configuration list for PBXProject "WWEasyApplePayUtil" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 245331111C76E7B500773FF8;
+			productRefGroup = 2453311B1C76E7B500773FF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				245331191C76E7B500773FF8 /* WWEasyApplePayUtil */,
+				245331321C76E7B500773FF8 /* WWEasyApplePayUtilTests */,
+				2453313D1C76E7B500773FF8 /* WWEasyApplePayUtilUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		245331181C76E7B500773FF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2453312D1C76E7B500773FF8 /* LaunchScreen.storyboard in Resources */,
+				2453312A1C76E7B500773FF8 /* Assets.xcassets in Resources */,
+				245331281C76E7B500773FF8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		245331311C76E7B500773FF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2453313C1C76E7B500773FF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		245331161C76E7B500773FF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				245331251C76E7B500773FF8 /* ViewController.m in Sources */,
+				245331541C76F2E300773FF8 /* WWEasyApplePayUtil.m in Sources */,
+				245331221C76E7B500773FF8 /* AppDelegate.m in Sources */,
+				2453311F1C76E7B500773FF8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2453312F1C76E7B500773FF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				245331381C76E7B500773FF8 /* WWEasyApplePayUtilTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2453313A1C76E7B500773FF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				245331431C76E7B500773FF8 /* WWEasyApplePayUtilUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		245331351C76E7B500773FF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 245331191C76E7B500773FF8 /* WWEasyApplePayUtil */;
+			targetProxy = 245331341C76E7B500773FF8 /* PBXContainerItemProxy */;
+		};
+		245331401C76E7B500773FF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 245331191C76E7B500773FF8 /* WWEasyApplePayUtil */;
+			targetProxy = 2453313F1C76E7B500773FF8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		245331261C76E7B500773FF8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				245331271C76E7B500773FF8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2453312B1C76E7B500773FF8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2453312C1C76E7B500773FF8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		245331451C76E7B500773FF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		245331461C76E7B500773FF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		245331481C76E7B500773FF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WWEasyApplePayUtil/WWEasyApplePayUtil.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chang Wang (3345GQZD7H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chang Wang (3345GQZD7H)";
+				INFOPLIST_FILE = WWEasyApplePayUtil/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "blog.csdn.net-shouqiangwei.WWEasyApplePayUtil";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6b5bd884-197d-4259-bf83-14f86187664f";
+			};
+			name = Debug;
+		};
+		245331491C76E7B500773FF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WWEasyApplePayUtil/WWEasyApplePayUtil.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chang Wang (3345GQZD7H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chang Wang (3345GQZD7H)";
+				INFOPLIST_FILE = WWEasyApplePayUtil/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "blog.csdn.net-shouqiangwei.WWEasyApplePayUtil";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6b5bd884-197d-4259-bf83-14f86187664f";
+			};
+			name = Release;
+		};
+		2453314B1C76E7B500773FF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WWEasyApplePayUtilTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "blog.csdn.net-shouqiangwei.WWEasyApplePayUtilTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WWEasyApplePayUtil.app/WWEasyApplePayUtil";
+			};
+			name = Debug;
+		};
+		2453314C1C76E7B500773FF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WWEasyApplePayUtilTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "blog.csdn.net-shouqiangwei.WWEasyApplePayUtilTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WWEasyApplePayUtil.app/WWEasyApplePayUtil";
+			};
+			name = Release;
+		};
+		2453314E1C76E7B500773FF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WWEasyApplePayUtilUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "blog.csdn.net-shouqiangwei.WWEasyApplePayUtilUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WWEasyApplePayUtil;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		2453314F1C76E7B500773FF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WWEasyApplePayUtilUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "blog.csdn.net-shouqiangwei.WWEasyApplePayUtilUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WWEasyApplePayUtil;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		245331151C76E7B500773FF8 /* Build configuration list for PBXProject "WWEasyApplePayUtil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				245331451C76E7B500773FF8 /* Debug */,
+				245331461C76E7B500773FF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		245331471C76E7B500773FF8 /* Build configuration list for PBXNativeTarget "WWEasyApplePayUtil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				245331481C76E7B500773FF8 /* Debug */,
+				245331491C76E7B500773FF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2453314A1C76E7B500773FF8 /* Build configuration list for PBXNativeTarget "WWEasyApplePayUtilTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2453314B1C76E7B500773FF8 /* Debug */,
+				2453314C1C76E7B500773FF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2453314D1C76E7B500773FF8 /* Build configuration list for PBXNativeTarget "WWEasyApplePayUtilUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2453314E1C76E7B500773FF8 /* Debug */,
+				2453314F1C76E7B500773FF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 245331121C76E7B500773FF8 /* Project object */;
+}
